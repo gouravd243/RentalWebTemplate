@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Rental</title>
+    <link rel="icon" type="Image/jpg" href="/Image/logo.jpg">
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- FontAwesome CSS Link -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- StyleSheet :  -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-left">
+            Phone no: +00 1234 567 or email us: emailsample@email.com
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://dribbble.com/"><i class="fab fa-dribbble"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                Vacation<span>Rental</span>
+            </a>
+
+            <!-- Hamburger -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Apartment Room</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+
+            const icon = menuToggle.querySelector("i");
+
+            if (navMenu.classList.contains("show")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+            } else {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+        });
+    </script>
+
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" >
+
+        <div class="hero-overlay"></div>
+
+        <div class="container-fluid">
+
+            <div class="row align-items-start">
+
+                <!-- LEFT CONTENT -->
+
+                <div class="col-lg-7 col-md-12 hero-content">
+
+                    <p class="welcome">
+                        Welcome to Vacation Rental
+                    </p>
+
+                    <h1>
+                        Rent an apartment<br>
+                        for your vacation
+                    </h1>
+
+                    <div class="hero-buttons">
+
+                        <a href="#" class="btn-main">
+                            LEARN MORE
+                        </a>
+
+                        <a href="#" class="btn-contact">
+                            CONTACT US
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= FORM ================= -->
+
+                <div class="col-lg-4 col-md-10 col-sm-12 booking-col">
+
+                    <div class="booking-box">
+
+                        <h2>
+                            Book your apartment
+                        </h2>
+
+                        <form>
+
+                            <!-- Full Name -->
+
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Full Name">
+                            </div>
+
+
+                            <!-- Check in / Check out -->
+
+                            <div class="row g-3">
+
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Check-In">
+                                </div>
+
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Check-Out">
+                                </div>
+
+                            </div>
+
+
+                            <!-- Adults / Children -->
+
+                            <div class="row g-3 mt-0">
+
+                                <div class="col-6">
+
+                                    <select class="form-select">
+
+                                        <option selected>
+                                            Adults
+                                        </option>
+
+                                        <option>1 Adult</option>
+                                        <option>2 Adults</option>
+                                        <option>3 Adults</option>
+                                        <option>4 Adults</option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="col-6">
+
+                                    <select class="form-select">
+
+                                        <option selected>
+                                            Children
+                                        </option>
+
+                                        <option>0 Children</option>
+                                        <option>1 Child</option>
+                                        <option>2 Children</option>
+                                        <option>3 Children</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Phone / Time -->
+
+                            <div class="row g-3 mt-0">
+
+                                <div class="col-6">
+
+                                    <input type="tel" class="form-control" placeholder="Phone number">
+
+                                </div>
+
+
+                                <div class="col-6">
+
+                                    <input type="time" class="form-control" placeholder="Time">
+
+                                </div>
+
+                            </div>
+
+
+                            <button type="submit" class="booking-btn">
+
+                                BOOK APPARTMENT NOW
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" data-aos="fade-down">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- CARD 1 -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="service-card">
+
+                        <img src="/Image/services-1.jpg" alt="Map Direction">
+
+                        <div class="card-content">
+
+                            <h3>
+                                Map Direction
+                            </h3>
+
+                            <p>
+                                Even the all-powerful Pointing has no control
+                            </p>
+
+                            <a href="#">
+                                READ MORE
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 2 -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="service-card">
+
+                        <img src="/Image/services-2.jpg" alt="Accommodation">
+
+                        <div class="card-content">
+
+                            <h3>
+                                Accomodation Services
+                            </h3>
+
+                            <p>
+                                Even the all-powerful Pointing has no control
+                            </p>
+
+                            <a href="#">
+                                READ MORE
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARD 3 -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="service-card">
+
+                        <img src="/Image/services-3.jpg" alt="Great Experience">
+
+                        <div class="card-content">
+
+                            <h3>
+                                Great Experience
+                            </h3>
+
+                            <p>
+                                Even the all-powerful Pointing has no control
+                            </p>
+
+                            <a href="#">
+                                READ MORE
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- <br><br><br>   <br><br> -->
+
+    <!-- main-2  -->
+
+    <div class="footer5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main-img gap-2">
+                        <div class="col-lg-4 col-md-8" data-aos="zoom-in-right">
+                            <div class="service-img1">
+                                <img src="/Image/services-1.jpg" alt="Image">
+                                <h3 align="center">Map Direction</h3>
+                                <p align="center">Even the all-powerful Pointing has no <br> control about the blind
+                                    texts it
+                                    is
+                                    an almost <br> unorthographic.</p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-8" data-aos="zoom-in-down">
+                            <div class="service-img2">
+                                <img src="/Image/services-2.jpg" alt="Image">
+                                <h3 align="center">Accomodation Services</h3>
+                                <p align="center">Even the all-powerful Pointing has no <br>control about the blind
+                                    texts it
+                                    is
+                                    an almost <br> unorthographic.</p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-8" data-aos="zoom-in-left">
+                            <div class="service-img3">
+                                <img src="/Image/services-3.jpg" alt="Image">
+                                <h3 align="center">Great Experience</h3>
+                                <p align="center">Even the all-powerful Pointing has no <br>control about the blind
+                                    texts it
+                                    is
+                                    an almost <br> unorthographic.</p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+
+    <!-- footer no. 5 -->
+    <div class="footer4-main">
+        <div class="container-fluid">
+            <div class="row" data-aos="zoom-in-down">
+                <div class="col-lg-6 col-md-12">
+                    <div class="forth">
+                        <div class="for-img"></div>
+                        <img src="/Image/bg_1.jpg" alt="IMAGE">
+
+                        <h2>The most recommended vacation rental</h2>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                            It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even
+                            the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however a small line of blind text by the name of Lorem Ipsum
+                            decided to leave for the far World of Grammar.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="forth2">
+                        <div class="m-head">
+                            <h2 class="head">What we offer</h2>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.
+                                It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                            </p>
+                        </div>
+                        <div class="for-main-ico d-flex" id="for-box">
+                            <div class="col-lg-6 d-flex">
+
+                                <i class="fa-solid fa-mug-saucer" id="for-icon"></i>
+                                <span>
+                                    <h5 class="">Tea Coffee</h5>
+                                    <p>A small river named Duden flows by their place and supplies it with the <br>
+                                        necessary
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="col-lg-6 d-flex">
+                                <i class="fa-solid fa-receipt" id="for-icon"></i>
+                                <span>
+                                    <h5 class="">Hot Showers</h5>
+                                    <p>A small river named Duden flows by their place and supplies it with the <br>
+                                        necessary
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="for-main-ico d-flex" id="for-box">
+                            <div class="col-lg-6 d-flex">
+
+                                <i class="fa-solid fa-building-circle-check" id="for-icon"></i>
+                                <span>
+                                    <h5 class="">Laundry</h5>
+                                    <p>A small river named Duden flows by their place and supplies it with the <br>
+                                        necessary
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="col-lg-6 d-flex">
+                                <i class="fa-solid fa-medal" id="for-icon"></i>
+                                <span>
+                                    <h5 class="">Air Conditioning</h5>
+                                    <p>A small river named Duden flows by their place and supplies it with the <br>
+                                        necessary
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="for-main-ico d-flex" id="for-box">
+                            <div class="col-lg-6 d-flex">
+
+                                <i class="fa-solid fa-wifi" id="for-icon"></i>
+                                <span>
+                                    <h5 class="">Free Wifi</h5>
+                                    <p>A small river named Duden flows by their place and supplies it with the <br>
+                                        necessary
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="col-lg-6 d-flex">
+                                <i class="fa-solid fa-kitchen-set" id="for-icon"></i>
+                                <span>
+                                    <h5 class="">Citchen</h5>
+                                    <p>A small river named Duden flows by their place and supplies it with the <br>
+                                        necessary
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="for-main-ico d-flex" id="for-box">
+                            <div class="col-lg-6 d-flex">
+
+                                <i class="fa-solid fa-shirt" id="for-icon"></i>
+                                <span>
+                                    <h5 class="">Ironing</h5>
+                                    <p>A small river named Duden flows by their place and supplies it with the <br>
+                                        necessary
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="col-lg-6 d-flex">
+                                <i class="fa-solid fa-user-nurse" id="for-icon"></i>
+                                <span>
+                                    <h5 class="">Workers</h5>
+                                    <p>A small river named Duden flows by their place and supplies it with the <br>
+                                        necessary
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <!-- footer thierd -->
+    <div class="footer3-main">
+        <div class="container">
+            <div class="row"  data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
+                <div class="col-lg-12">
+                    <div class="therd">
+                        <div class="img">
+                            <h1>Ready To Get Started</h1>
+                            <p>it's safe to book online with us! Get your dream stay in click or drop us a line with
+                                your
+                                questions.</p>
+                            <div class="buton">
+                                <a href="#" class="a1">BOOK NOW</a>
+                                <a href="#" class="a2">CONTACT US</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+
+    <!-- seconf footer -->
+    <div class="footer1-main">
+        <div class="container">
+            <div class="row" v data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="col-lg-12">
+                    <h2 class="heading-section">Latest news from our blog</h2>
+                    <span class="sub-heading">News & Blog</span>
+                </div>
+            </div>
+            <br><br>
+            <div class="row d-flex"  data-aos="fade-up"
+     data-aos-anchor-placement="center-center">
+                <div class="col-lg-4 col-md-12">
+                    <div class="img">
+                        <a href="" class="block-20"><img src="/Image/image_1.jpg" alt="Image"></a>
+                        <div class="text p-4 text-center">
+                            <a href="" class="a">
+                                <h4 class="heading">Work Hard, Party Hard in a Luxury Chalet in the Alps</h4>
+                            </a>
+                            <a href="#">January 30, 2020</a>
+                            <a href="#">Admin</a>
+                            <a href="#"><i class="fa-solid fa-comment"></i>3</a>
+                            <P>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+                            </P>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="img">
+                        <a href="" class="block-00"><img src="/Image/image_2.jpg" alt="Image"></a>
+                        <div class="text p-4 text-center">
+                            <a href="" class="a">
+                                <h4 class="heading">Work Hard, Party Hard in a Luxury Chalet in the Alps</h4>
+                            </a>
+                            <a href="#">January 30, 2020</a>
+                            <a href="#">Admin</a>
+                            <a href="#"><i class="fa-solid fa-comment"></i>3</a>
+                            <P>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="img">
+                        <a href="" class="block-20"><img src="/Image/image_3.jpg" alt="Image"></a>
+                        <div class="text p-4 text-center">
+                            <a href="" class="a">
+                                <h4 class="heading">Work Hard, Party Hard in a Luxury Chalet in the Alps</h4>
+                            </a>
+                            <a href="#">January 30, 2020</a>
+                            <a href="#">Admin</a>
+                            <a href="#"><i class="fa-solid fa-comment"></i>3</a>
+                            <P>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+                            </P>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+
+    <!-- Footer -->
+
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h2 class="footer-heading">
+                        <a href="#" class="click">Vacation Rental</a>
+                    </h2>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <a href="#" class="abc">
+                        Reaed More
+                        <i class="fa-solid fa-chevron-right" style="font-size: 11PX;">
+                            ::before
+                        </i>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <h2 class="footer-heading">Services</h2>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="py-1 d-block">Map Direction</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-1 d-block">Accomodation Services</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-1 d-block">Great Experience</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-1 d-block">Perfect central location</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h2 class="footer-heading">Tag cloud</h2>
+                    <div class="links">
+                        <a href="#">APARTMENT</a>
+                        <a href="#">HOME</a>
+                        <a href="#">VACATION</a>
+                        <a href="#">RENTAL</a>
+                        <a href="#">RENT</a>
+                        <a href="#">HOUSE</a>
+                        <a href="#">PLACE</a>
+                        <a href="#">DRINKS</a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h2 class="footer-heading">Subcribe</h2>
+                    <form action="#" class="email-form">
+                        <input type="text" class="form-control rounded-left" placeholder="Enter Email Address">
+                        <button type="submit" class="submit">
+                            <span class="sr-only">Submit</span>
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <h2 class="footer-heading mt-5 ">Follow Us</h2>
+                    <ul class="footer-social-icon p-0">
+                        <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS LINK -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- bootstrap JS Link -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome JS Link -->
+    <script src="/js/all.min.js"></script>
+</body>
+
+</html>
